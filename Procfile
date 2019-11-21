@@ -1,1 +1,1 @@
-worker: npm run test
+worker: npm ci && npm run test
