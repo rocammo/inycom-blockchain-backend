@@ -45,7 +45,10 @@ router.post("/", (req, res) => {
     fu.getFileExtension(document.name).localeCompare("json") == 0 &&
     url.includes("https://rinkeby.etherscan.io/tx/")
   ) {
-    let jsonHash = _.hash.digest(document.data);
+    const path = "./uploads/" + document.name;
+    _.fs.writeFileSync(path, document.data);
+    let jsonHash = _.hash.digest(JSON.parse(_.fs.readFileSync(path)));
+    _.fs.unlinkSync(path);
     let txHash = url.replace("https://rinkeby.etherscan.io/tx/", "");
 
     web3.eth.getTransaction(txHash).then(txn => {
