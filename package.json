@@ -2,13 +2,14 @@
   "name": "inycom-blockchain-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src"
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src src/server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Rodrigo Casamayor <rodrigo.casamayor@inycom.es>",
+  "license": "Apache-2.0",
   "dependencies": {
     "canoe-solidity": "^0.1.0",
     "express": "^4.17.1",
@@ -20,6 +21,6 @@
     "web3": "^1.2.4"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^2.0.0"
   }
 }

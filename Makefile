@@ -10,7 +10,7 @@ build: ;@echo "Building ${PROJECT}....."; \
 	mkdir uploads
 
 serve: ;@echo "Serving ${PROJECT}....."; \
-	nodemon src
+	nodemon --watch src src/server.js
 
 clean : ;
 	rm -rf node_modules
