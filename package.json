@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir uploads",
-    "start": "nodemon src"
+    "dev": "nodemon src"
   },
   "keywords": [],
   "author": "",
