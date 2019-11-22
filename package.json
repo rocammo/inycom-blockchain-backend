@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "canoe-solidity": "^0.1.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6-alpha.6",
     "json-hash": "^1.2.0",
